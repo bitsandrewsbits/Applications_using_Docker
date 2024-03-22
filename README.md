@@ -1,2 +1,2 @@
 # TensorFlow_projects
-# testing, developing using this ML framework
+# testing, developing programms using this ML library
