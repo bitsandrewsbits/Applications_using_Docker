@@ -1,6 +1,6 @@
 # base image, which using for future building image
 
-FROM node:22-alpine3.19
+FROM node:15.14-alpine
 
 WORKDIR /app
 
@@ -13,4 +13,4 @@ RUN npm install --silient
 COPY . ./
 
 # command to start process within container
-CMD ['npm', 'start']
+CMD ["npm", "start"]
