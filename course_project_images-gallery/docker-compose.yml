@@ -20,6 +20,8 @@ services:
   mongo:
     image: mongo
     restart: always
+    volumes:
+      - mongo_database:/data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: my_mongo_password
@@ -37,3 +39,8 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: my_mongo_password
     depends_on:
       - mongo
+
+# creating Docker volume for MongoDB for save created data,
+# in case when Docker Compose remove stopped containers.
+volumes:
+  mongo_database:
